@@ -1,18 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My first website</title>
-  </head>
-  <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my first website.</p>
-    <h2>Web Security</h2>
-    <p id="web-security-question">How would you advise a potential client to secure his/her website from web security attacks? Note: the word count for your answer should not be greater than 250 words</p>
-    <p id="web-security-answer">
-        <li>Ensuring that the data a system accepts is in the right format, and preventing user-inputs performing CRUD operations. </li> 
-        <li> Ensuring that authorization and authentication are hard to crack by using secure two-factor authentication sliutions, such as Microsoft Authenticator, OneLogin etc, or other frameworks for securing passord/user security. </li> 
-        <li>Be sure that the third-party software applications being used is to be trusted and throughout tested before using it. A rarely downloaded/used software might not be the most secure sliution.</li>
-        <li>Using Continuous Deployment/Continuous Integration to run every change against some security checks, and decides the delivery of the change to productions. If the code does not pass the checks, it will ble flagged/rejected, and needs rework. </li>             <li>Automatic user timeout, so the used credentials don't hang in the browser for a long time. </li>  
-        </p>
-  </body>
+
+<head>
+  <title>CA GameHub - Homepage</title>
+  <meta name="description" content="CA - GameHub - BHL - Homepage" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>Contact</li>
+        <li>Sell Games</li>
+        <li>Search</li>
+        <li>Wishlist</li>
+        <li>My Page</li>
+        <li>Cart</li>
+      </ul>
+    </nav>
+    <h1>GAME HUB</h1>
+  </header>
+  <main>
+
+    <div class="frontpicture_img">
+      <img src="/images/gamecovers/game_black.jpg" alt="A game called black" class="frontpicture_img" />
+    </div>
+  </main>
+
+  <section>
+    <div class="sel_frontpicture">
+      <img src="/images/gamecovers/game_black.jpg" alt="A game called black" class="sel_frontpicture" />
+      <img src="/images/gamecovers/game_spacewar.jpg" alt="A game called spacewar" class="sel_frontpicture" />
+      <img src="/images/gamecovers/game_assassin.jpg" alt="A game called assassin" class="sel_frontpicture" />
+      <img src="/images/gamecovers/game_cyberpunk.jpg" alt="A game called cyberpunk" class="sel_frontpicture" />
+    </div>
+  </section>
+
+
+
+
+  <aside>
+    <h1>Used games</h1>
+    <div class="game_img">
+      <img src="/images/gamecovers/game_spacewar.jpg" alt="A game called spacewar" class="game_img" />
+      <img src="/images/gamecovers/game_racing.jpg" alt="A game called racing" class="game_img" />
+      <img src="/images/gamecovers/game_boxer.jpg" alt="A game called boxer" class="game_img" />
+      <img src="/images/gamecovers/game_furious.jpg" alt="A game called furious" class="game_img" />
+    </div>
+
+    <h1>Top sellers</h1>
+    <div class="game_img">
+      <img src="/images/gamecovers/game_pingpongchampionship.jpg" alt="A game called ping pong championship"
+        class="game_img" />
+      <img src="/images/gamecovers/game_superduper.jpg" alt="A game called superduper" class="game_img" />
+      <img src="/images/gamecovers/game_furious.jpg" alt="A game called furious" class="game_img" />
+      <img src="/images/gamecovers/game_forgelegend.jpg" alt="A game called forge legend" class="game_img" />
+    </div>
+  </aside>
+
+  <footer>
+    <h1>This is where the social media interactive buttons will be placed</h1>
+    <p>Copyright paragraph</p>
+    <p>terms of service, blablabla</p>
+  </footer>
+</body>
+
 </html>
