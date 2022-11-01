@@ -1,11 +1,12 @@
 body {
+    margin: 0px;
     background: white;
     min-height: 100vh;
     display: grid;
     grid-gap: 1em;
     grid-template-areas: 
     'header header'
-    'main section'
+    'main main'
     'aside aside'
     'footer footer'
     ;
@@ -13,57 +14,152 @@ body {
 }
 
 header, main, section, aside, footer {
-    background: gray;
+    background: none;
 }
 
 header {
     background: orange;
-}
-
-main {
-max-width: 75%;
-}
-
-section {
 
 }
 
+.home-logo{
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.navigation_buttons {
+    margin: 1%;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    max-height: 100%;
+    
+
+  
+}
+
+/* starts:
+Gotten from page: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/  "how to make a searchbar in HTML/CSS" */
+form {
+    background-color: white;
+    width: 300px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  input {
+    all: unset;
+    font: 16px system-ui;
+    color: black;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+  }
+
+  ::placeholder {
+    color: black;
+    opacity: 0.5; 
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+  }
+  
+  svg {
+    color: black;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+  }
+/* Done some adjusting myself to make it suit my design
+ends */
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
 
 .frontpicture_img {
-    max-width: 75%;
-    max-height: 75%;
-    border-radius: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+    grid-column-start: 1;
+    grid-column-end: 2;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-aside{
-
-}
 .sel_frontpicture {
-    max-width: 25%;
-    max-height: 25%;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    max-width: 100%;
+    max-height: 50%;
     border-radius: 10px;
+    margin-right: auto;
+}
 
+.pic_positioning_main{
+    position: relative;
+    left: 20%;
+}
+
+.pic_positioning_side{
+    position: relative;
+    left: 40%;
 }
 
 .game_img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
     display: grid;
     grid-gap: 1em;
     grid-template-columns: auto auto auto auto;
+    margin-left: 1%;
+    margin-right: 1%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    
 }
 
 
 
 footer {
     background: lightgray;
+
 }
 
+ .social_media_buttons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+  }
+
+.hr_line{
+}
+
+.footer_copyright_paragraph{
+    margin: 40px 20px;
+    text-align: left;
+}
+
+.footer_policy{
+    margin: 40px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: left;
+}
 
 header{grid-area: header;}
 main{grid-area: main;}
