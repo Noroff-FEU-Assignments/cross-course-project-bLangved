@@ -2,16 +2,50 @@ body {
     margin: 0px;
     background: white;
     min-height: 100vh;
+}
+
+.body_index{
     display: grid;
     grid-gap: 1em;
     grid-template-areas: 
-    'header header'
-    'main main'
-    'aside aside'
-    'footer footer'
-    ;
+    'header'
+    'main'
+    'aside'
+    'footer';
+}
+
+.body_about{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 
+    'header'
+    'main'
+    'aside'
+    'footer';
+}
+
+.body_contact{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 
+    'header'
+    'main'
+    'aside'
+    'footer';
+}
+
+.body_checkout{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 
+    'header'
+    'main'
+    'aside'
+    'footer';
+    background: #474747;    
 
 }
+
 
 header, main, section, aside, footer {
     background: none;
@@ -19,10 +53,12 @@ header, main, section, aside, footer {
 
 header {
     background: orange;
-
+    width: 100%;
+    height: 15vh;
 }
 
-.home-logo{
+
+.home-logo {
     display: flex;
     flex-direction: row;
     margin: 1%;
@@ -36,9 +72,6 @@ header {
     flex-direction: row;
     max-width: 100%;
     max-height: 100%;
-    
-
-  
 }
 
 /* starts:
@@ -47,7 +80,7 @@ form {
     background-color: white;
     width: 300px;
     height: 44px;
-    border-radius: 5px;
+    border-radius: 15px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -83,6 +116,91 @@ form {
   }
 /* Done some adjusting myself to make it suit my design
 ends */
+
+main{
+}
+
+.main_index{
+}
+
+.main_about{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.main_contact{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.main_checkout{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.h1_about{
+    text-align: center;
+}
+
+.h1_contact{
+    text-align: center;
+}
+
+.h1_checkout{
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.main_container_checkout{
+    display: grid;
+    grid-template-areas: 
+    'main_box1_checkout main_box4_checkout .'
+    'main_box2_checkout main_box5_checkout main_box6_checkout'
+    'main_box3_checkout . .'
+    ;
+}
+
+.main_left-container_checkout{
+    text-align: left;
+}
+
+.main_right-container_checkout{
+ 
+    }
+
+
+.pic1_about{
+    max-width: 40%;
+    max-height: 40%;
+    float: left;
+}
+
+.pic1_contact{
+    max-width: 40%;
+    max-height: 40%;
+    float: left;
+}
+
+.main_sub_title_about{
+
+}
+
+.main_sub_title_contact{
+
+}
+
+.pic2_about{
+    max-width: 40%;
+    max-height: 40%;
+    float: right;
+}
+
+.pic2_contact{
+    max-width: 40%;
+    max-height: 40%;
+    float: right;
+}
 
 .wrapper{
     display: grid;
@@ -133,6 +251,13 @@ ends */
 
 footer {
     background: lightgray;
+}
+
+.footer_index{
+
+}
+
+.footer_about{
 
 }
 
