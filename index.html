@@ -9,72 +9,63 @@
 </head>
 
 <body class="body_index">
-  <header class="index_header">
-    <div class="home-logo">
-      <a href="index.html"><img src="/images/global images/navigation_icons_header/home_logo.png"
-          alt="Navigate to home page" class="home-logo" /></a>
-      <a href="index.html"><img src="/images/global images/navigation_icons_header/gamehub_logo_text.png"
-          alt="Navigate to home page" class="home-logo" /></a>
-      <nav class="navigation_buttons">
-        <a href="contact.html"><img src="/images/global images/navigation_icons_header/contact_icon.png"
-            alt="Navigate to contact page" class="navigation_buttons" /></a>
-        <a href="sellgames.html"><img src="/images/global images/navigation_icons_header/Sell_games_icon.png"
-            alt="Navigate to sell games page" class="navigation_buttons" /></a>
-        <!-- starts:
-        Gotten from page: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/  "how to make a searchbar in HTML/CSS"-->
-        <form id="form" role="header_searchbar">
-          <input type="search" id="query" name="q" placeholder="Search the gamestore..."
-            aria-label="Search through site content">
-          <button>
-            <svg viewBox="0 0 1024 1024">
-              <path class="path1"
-                d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
-              </path>
-            </svg>
-          </button>
-        </form>
-        <!-- Done some minor adjusting myself to make it suit my design
-  ends -->
-        <a href="wishlist.html"><img src="/images/global images/navigation_icons_header/wishlist_icon.png"
-            alt="Navigate to wishlist page" class="navigation_buttons" /></a>
-        <a href="mypage.html"><img src="/images/global images/navigation_icons_header/mypage_icon.png"
-            alt="Navigate to my page" class="navigation_buttons" /></a>
-        <a href="cart.html"> <img src="/images/global images/navigation_icons_header/cart_icon.png"
-            alt="Navigate to shopping cart" class="navigation_buttons" /></a>
-      </nav>
-    </div>
+  <header class="header_index">
+    <nav>
+      <ul class="ul_header">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sellgames.html">Sell games</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="mypage.html">My Page</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="main_index">
-    <div class="wrapper">
-      <div class="frontpicture_img pic_positioning_main">
+    <form action="searchbar.php" method="POST">
+      <fieldset class="fieldset_searchbar_main">
+        <label class="searchbar_main_index" for="searchbar"></label>
+        <input type="text" name="searchbar" id="searchbar" class="input_searchbar_main_style">
+      </fieldset>
+    </form>
+
+    <div class="main_pictures_container_index">
+      <div class="main_highlighted_picture_index pic_positioning_main">
         <img src="/images/index/frontpage_images/frontpage_previewedgame_black.png" alt="A game called black"
-          class="frontpicture_img" />
+          class="main_highlighted_picture_index" />
       </div>
-      <div class="sel_frontpicture pic_positioning_side">
-        <img src="/images/index/gamecovers/game_black.jpg" alt="A game called black" class="sel_frontpicture" />
-        <img src="/images/index/gamecovers/game_spacewar.jpg" alt="A game called spacewar" class="sel_frontpicture" />
-        <img src="/images/index/gamecovers/game_assassin.jpg" alt="A game called assassin" class="sel_frontpicture" />
-        <img src="/images/index/gamecovers/game_cyberpunk.jpg" alt="A game called cyberpunk" class="sel_frontpicture" />
+      <div class="main_game_icons_index pic_positioning_side">
+        <img src="/images/index/frontpage_images/game_icon_black.png" alt="A game called black"
+          class="main_game_icons_index main_game_icon_select1" />
+        <img src="/images/index/frontpage_images/game_icon_spacewar.png" alt="A game called spacewar"
+          class="main_game_icons_index main_game_icon_select2" />
+        <img src="/images/index/frontpage_images/game_icon_assassin.png" alt="A game called assassin"
+          class="main_game_icons_index main_game_icon_select3" />
+        <img src="/images/index/frontpage_images/game_icon_cyberpunk.png" alt="A game called cyberpunk"
+          class="main_game_icons_index main_game_icon_select4" />
       </div>
     </div>
   </main>
 
   <aside class="aside_index">
-    <h1>Used games</h1>
-    <div class="game_img">
-      <img src="/images/index/gamecovers/game_spacewar.jpg" alt="A game called spacewar" class="game_img" />
-      <img src="/images/index/gamecovers/game_racing.jpg" alt="A game called racing" class="game_img" />
-      <img src="/images/index/gamecovers/game_boxer.jpg" alt="A game called boxer" class="game_img" />
-      <img src="/images/index/gamecovers/game_furious.jpg" alt="A game called furious" class="game_img" />
+    <h1 class="h1_index">Used games</h1>
+    <div class="aside_games_index">
+      <img src="/images/index/gamecovers/game_spacewar.jpg" alt="A game called spacewar" class="aside_games_index" />
+      <img src="/images/index/gamecovers/game_racing.jpg" alt="A game called racing" class="aside_games_index" />
+      <img src="/images/index/gamecovers/game_boxer.jpg" alt="A game called boxer" class="aside_games_index" />
+      <img src="/images/index/gamecovers/game_furious.jpg" alt="A game called furious" class="aside_games_index" />
     </div>
-    <h1>Top sellers</h1>
-    <div class="game_img">
+    <h2 class="h2_index">Top sellers</h2>
+    <div class="aside_games_index">
       <img src="/images/index/gamecovers/game_pingpongchampionship.jpg" alt="A game called ping pong championship"
-        class="game_img" />
-      <img src="/images/index/gamecovers/game_superduper.jpg" alt="A game called superduper" class="game_img" />
-      <img src="/images/index/gamecovers/game_furious.jpg" alt="A game called furious" class="game_img" />
-      <img src="/images/index/gamecovers/game_forgelegend.jpg" alt="A game called forge legend" class="game_img" />
+        class="aside_games_index" />
+      <img src="/images/index/gamecovers/game_superduper.jpg" alt="A game called superduper"
+        class="aside_games_index" />
+      <img src="/images/index/gamecovers/game_furious.jpg" alt="A game called furious" class="aside_games_index" />
+      <img src="/images/index/gamecovers/game_forgelegend.jpg" alt="A game called forge legend"
+        class="aside_games_index" />
     </div>
   </aside>
 

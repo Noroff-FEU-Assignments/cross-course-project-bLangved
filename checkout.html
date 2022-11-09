@@ -18,42 +18,63 @@
 
     <main class="main_checkout">
         <h1 class="h1_checkout">Checkout information</h1>
-        <p class="main_p1_checkout">Pay with</p>
+        <h2 class="h2_checkout">Pay with</h2>
 
-        <div class="main_container_checkout">
-            <div class="main_left-container_checkout">
-                <div class="main_box1_checkout">
-                    <p>full name</p>
-                    <p>box1</p>
-                </div>
-                <div class="main_box2_checkout">
-                    <p>address</p>
-                    <p>box2</p>
-                </div>
-                <div class="main_box3_checkout">
-                    <p>address</p>
-                    <p>box3</p>
-                </div>
-            </div>
-            <div class="main_right-container_checkout">
-                <div class="main_box4_checkout">
-                    <p>address</p>
-                    <p>box4</p>
-                </div>
-                <div class="main_box5_checkout">
-                    <p>address</p>
-                    <p>box5</p>
-                </div>
-                <div class="main_box6_checkout">
-                    <p>address</p>
-                    <p>box6</p>
-                </div>
-            </div>
+        <div class="card_options_checkout">
+            <img src="/images/checkout/VISA.png" alt="A picture of a VISA card as a payment option"
+                class="card_options_checkout" />
+            <img src="/images/checkout/AMEX.png" alt="A picture of an AMEX card as a payment option"
+                class="card_options_checkout" />
+            <img src="/images/checkout/MASTERCARD.png" alt="A picture of a Mastercard card as a payment option"
+                class="card_options_checkout" />
         </div>
 
+        <div class="main_checkout_input-text_style"></div>
+        <div class="main_checkout_input-field_style"></div>
 
+        <form action="checkout-success.php" method="POST">
+            <fieldset class="fieldset_checkout">
+                <div class="main_container_checkout">
+                    <div class="main_left-container_checkout">
 
+                        <label class="main_checkout_input-text_style" for="name">full name</label>
+                        <input type="text" name="name" id="name"
+                            class="form__input_checkout main_checkout_input-field_style" required>
+
+                        <label class="main_checkout_input-text_style" for="address">address</label>
+                        <input type="text" name="address" id="address"
+                            class="form__input_checkout main_checkout_input-field_style">
+
+                        <label class="main_checkout_input-text_style" for="email">email</label>
+                        <input type="text" name="email" id="email"
+                            class="form__input_checkout main_checkout_input-field_style">
+                    </div>
+                    <div class="main_right-container_checkout">
+
+                        <label class="main_checkout_input-text_style" for="cardnumber">card number</label>
+                        <input type="text" name="cardnumber" id="cardnumber"
+                            class="form__input_checkout main_checkout_input-field_style" required>
+
+                        <label class="main_checkout_input-text_style" for="expires">expires</label>
+                        <input type="text" name="expires" id="expires"
+                            class="form__input_checkout main_checkout_input-field_style">
+
+                        <label class="main_checkout_input-text_style" for="cvv2">cvv2</label>
+                        <input type="text" name="cvv2" id="cvv2"
+                            class="form__input_checkout main_checkout_input-field_style">
+                    </div>
+
+                </div>
+            </fieldset>
+            <fieldset class="fieldset_submit_checkout">
+                <input type="submit" value="Buy">
+            </fieldset>
+        </form>
     </main>
+
+
+
+
 
 
     <footer class="footer_checkout">

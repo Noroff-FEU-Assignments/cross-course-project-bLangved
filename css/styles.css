@@ -1,12 +1,11 @@
+
+
+
 body {
     margin: 0px;
     background: white;
     min-height: 100vh;
-}
-
-.body_index{
     display: grid;
-    grid-gap: 1em;
     grid-template-areas: 
     'header'
     'main'
@@ -14,113 +13,62 @@ body {
     'footer';
 }
 
-.body_about{
-    display: grid;
-    grid-gap: 1em;
-    grid-template-areas: 
-    'header'
-    'main'
-    'aside'
-    'footer';
-}
-
-.body_contact{
-    display: grid;
-    grid-gap: 1em;
-    grid-template-areas: 
-    'header'
-    'main'
-    'aside'
-    'footer';
-}
 
 .body_checkout{
-    display: grid;
     grid-gap: 1em;
-    grid-template-areas: 
-    'header'
-    'main'
-    'aside'
-    'footer';
     background: #474747;    
 
 }
 
-
-header, main, section, aside, footer {
-    background: none;
-}
-
 header {
     background: orange;
-    width: 100%;
-    height: 15vh;
-}
-
-
-.home-logo {
-    display: flex;
-    flex-direction: row;
-    margin: 1%;
     max-width: 100%;
-    max-height: 100%;
+    height: 12vh;
+    background-image: url(/images/global\ images/navigation_icons_header/gamehub-logo-text.png);
+    background-size: 320px;
+    background-repeat: no-repeat;
+    background-position: center;
+}   
+
+.ul_header{
+    display: block;
+    margin-top: 85px;
+    list-style: none;
+    overflow: hidden;
+    background-color: orange;
+    
+    
 }
 
-.navigation_buttons {
-    margin: 1%;
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-/* starts:
-Gotten from page: https://pagedart.com/blog/how-to-add-a-search-bar-in-html/  "how to make a searchbar in HTML/CSS" */
-form {
-    background-color: white;
-    width: 300px;
-    height: 44px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  input {
-    all: unset;
-    font: 16px system-ui;
-    color: black;
-    height: 100%;
-    width: 100%;
-    padding: 6px 10px;
-  }
-
-  ::placeholder {
-    color: black;
-    opacity: 0.5; 
-  }
-
-  button {
-    all: unset;
-    cursor: pointer;
-    width: 44px;
-    height: 44px;
-  }
-  
-  svg {
-    color: black;
-    fill: currentColor;
-    width: 24px;
-    height: 24px;
+li a{
+    float: left;
     padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.2s ease-in-out;
+}
+
+li a:hover:not(.active) {
+    background-color: darkorange;
   }
-/* Done some adjusting myself to make it suit my design
-ends */
+
+li a.active{
+    background-color: white;
+
+}
+
+
+
 
 main{
+    
+
 }
 
-.main_index{
+.main_index{    
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .main_about{
@@ -136,6 +84,36 @@ main{
 .main_checkout{
     margin-left: 3%;
     margin-right: 3%;
+    height: 50vh;
+}
+
+.fieldset_searchbar_main{
+    border: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.input_searchbar_main_style{
+    border: 2px solid orange;
+    border-radius: 3px;
+    outline: none;
+    font-size: 15px;
+    width: 40%;
+    height: 35px;
+    margin-top: 10px;
+    transition: width 0.4s ease-in-out;
+}
+
+.input_searchbar_main_style:focus{
+    border: 2px solid darkorange;
+}
+
+.h1_index, .h2_index{
+margin-left: 10px;
+text-transform: uppercase;
+font-size: 18px;
+
 }
 
 .h1_about{
@@ -147,27 +125,64 @@ main{
 }
 
 .h1_checkout{
-    position: relative;
     color: white;
     text-transform: uppercase;
     font-size: 22px;
 }
-.main_container_checkout{
+
+
+.h2_checkout{
+    color: white;
+    font-size: 12px;
+}
+
+.card_options_checkout{
+    max-width: 30%;
+    height: auto;
+}
+
+.main_checkout_input-text_style{
+    color: orange;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main_checkout_input-field_style{
+    background: lightgray;
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 20%;
+}
+
+.fieldset_checkout{
+    border: 0;
+}
+
+.fieldset_submit_checkout{
+    background: #7CCB83;
+    border-radius: 10px;
+    max-width: 30%;
+    max-height: 100%;
+    text-align: center;
+    margin: auto;
+    border: none;  
+}
+
+.form__input_checkout{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+
+.main_container_checkout{   
     display: grid;
-    grid-template-areas: 
-    'main_box1_checkout main_box4_checkout .'
-    'main_box2_checkout main_box5_checkout main_box6_checkout'
-    'main_box3_checkout . .'
-    ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+
 }
 
-.main_left-container_checkout{
-    text-align: left;
-}
-
-.main_right-container_checkout{
- 
-    }
 
 
 .pic1_about{
@@ -202,51 +217,68 @@ main{
     float: right;
 }
 
-.wrapper{
+.main_pictures_container_index{
     display: grid;
     grid-template-columns: 2fr 1fr;
 
 }
 
-.frontpicture_img {
+.main_highlighted_picture_index {
     grid-column-start: 1;
     grid-column-end: 2;
     max-width: 100%;
     max-height: 100%;
 }
 
-.sel_frontpicture {
+.main_game_icons_index {
     grid-column-start: 2;
     grid-column-end: 3;
     display: grid;
     max-width: 100%;
     max-height: 50%;
-    border-radius: 10px;
     margin-right: auto;
+    
 }
 
 .pic_positioning_main{
     position: relative;
-    left: 20%;
+    left: 15%;
 }
 
 .pic_positioning_side{
     position: relative;
-    left: 40%;
+    left: 30%;
+    transition: background-color 0.2s ease-in-out;
 }
 
-.game_img {
-    display: grid;
-    grid-gap: 1em;
-    grid-template-columns: auto auto auto auto;
-    margin-left: 1%;
-    margin-right: 1%;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
+.pic_positioning_side:hover:not(.active) {
+    background-color: lightgray;
+  }
+
+
+.pic_positioning_side.active{
+
+} 
+
+.main_game_icon_select1{
     
 }
 
+
+.aside_games_index {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: auto auto auto auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.aside_index{
+    margin-bottom: 30px;
+}
 
 
 footer {
@@ -267,8 +299,7 @@ footer {
     margin-right: auto;
     max-width: 50%;
     margin-top: 10px;
-    margin-bottom: 10px;
-    
+    margin-bottom: 10px; 
   }
 
 .hr_line{
@@ -276,14 +307,16 @@ footer {
 
 .footer_copyright_paragraph{
     margin: 40px 20px;
+    font-size: 12px;
     text-align: left;
 }
 
 .footer_policy{
     margin: 40px 10px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     text-align: left;
+    color: black;
 }
 
 header{grid-area: header;}
