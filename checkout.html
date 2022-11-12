@@ -6,6 +6,7 @@
     <meta name="description" content="CA - GameHub - BHL - Checkout" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4652493b4c.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="body_checkout">
@@ -38,9 +39,12 @@
         </nav>
     </header>
 
-
     <main class="main_checkout">
-        <h1 class="h1_checkout">Checkout information</h1>
+
+        <div class="header-and-logo_checkout">
+            <h1 class="h1_checkout">Checkout information</h1>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
         <h2 class="h2_checkout">Pay with</h2>
 
         <div class="card_options_checkout">
@@ -52,49 +56,54 @@
                 class="card_options_checkout" />
         </div>
 
-        <div class="main_checkout_input-text_style"></div>
-        <div class="main_checkout_input-field_style"></div>
+        <div class="main_checkout_input-text_style">
+            <div class="main_checkout_input-field_style">
 
-        <form action="checkout-success.php" method="POST">
-            <fieldset class="fieldset_checkout">
-                <div class="main_container_checkout">
-                    <div class="main_left-container_checkout">
+                <form action="checkout-success.php" method="POST">
+                    <fieldset class="fieldset_checkout">
+                        <div class="main_container_checkout">
+                            <div class="main_left-container_checkout">
 
-                        <label class="main_checkout_input-text_style" for="name">full name</label>
-                        <input type="text" name="name" id="name"
-                            class="form__input_checkout main_checkout_input-field_style" required>
+                                <label class="main_checkout_input-text_style" for="name">full name</label>
+                                <input type="text" name="name" id="name"
+                                    class="form__input_checkout main_checkout_input-field_style" required>
 
-                        <label class="main_checkout_input-text_style" for="address">address</label>
-                        <input type="text" name="address" id="address"
-                            class="form__input_checkout main_checkout_input-field_style">
+                                <label class="main_checkout_input-text_style" for="address">address</label>
+                                <input type="text" name="address" id="address"
+                                    class="form__input_checkout main_checkout_input-field_style">
 
-                        <label class="main_checkout_input-text_style" for="email">email</label>
-                        <input type="text" name="email" id="email"
-                            class="form__input_checkout main_checkout_input-field_style">
-                    </div>
-                    <div class="main_right-container_checkout">
+                                <label class="main_checkout_input-text_style" for="email">email</label>
+                                <input type="text" name="email" id="email"
+                                    class="form__input_checkout main_checkout_input-field_style">
+                            </div>
+                            <div class="main_right-container_checkout">
 
-                        <label class="main_checkout_input-text_style" for="cardnumber">card number</label>
-                        <input type="text" name="cardnumber" id="cardnumber"
-                            class="form__input_checkout main_checkout_input-field_style" required>
+                                <label class="main_checkout_input-text_style" for="cardnumber">card number</label>
+                                <input type="text" name="cardnumber" id="cardnumber"
+                                    class="form__input_checkout main_checkout_input-field_style" required>
 
-                        <label class="main_checkout_input-text_style" for="expires">expires</label>
-                        <input type="text" name="expires" id="expires"
-                            class="form__input_checkout main_checkout_input-field_style">
+                                <label class="main_checkout_input-text_style" for="expires">expires</label>
+                                <input type="text" name="expires" id="expires"
+                                    class="form__input_checkout main_checkout_input-field_style">
 
-                        <label class="main_checkout_input-text_style" for="cvv2">cvv2</label>
-                        <input type="text" name="cvv2" id="cvv2"
-                            class="form__input_checkout main_checkout_input-field_style">
-                    </div>
-
-                </div>
-            </fieldset>
-            <fieldset class="fieldset_submit_checkout">
-                <input type="submit" value="Buy">
-            </fieldset>
-        </form>
+                                <label class="main_checkout_input-text_style" for="cvv2">cvv2</label>
+                                <input type="text" name="cvv2" id="cvv2"
+                                    class="form__input_checkout main_checkout_input-field_style">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
     </main>
 
+    <aside>
+        <div>
+            <a href="index.html">
+                <button class="button button_confirm-order_checkout">Confirm order</button>
+            </a>
+        </div>
+    </aside>
 
     <footer>
         <div class="social_media_buttons">

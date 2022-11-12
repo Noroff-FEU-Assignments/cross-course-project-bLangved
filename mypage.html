@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <title>CA GameHub - Conctact</title>
-    <meta name="description" content="CA - GameHub - BHL - Contact" />
+    <title>CA GameHub - My Page / Log in</title>
+    <meta name="description" content="CA - GameHub - BHL - My Page / Log in" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/4652493b4c.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="body_contact">
+<body class="body_index">
 
     <header>
         <div class="gamehub-logo_banner">
@@ -20,11 +20,11 @@
         </div>
         <nav>
             <ul class="ul_header_desktop">
-                <li><a class="active" href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="sellgames.html">Sell games</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="wishlist.html">Wishlist</a></li>
-                <li><a href="mypage.html">My Page</a></li>
+                <li><a class="active" href="mypage.html">My Page</a></li>
                 <li><a href="cart.html">Cart</a></li>
                 <li><a>
                         <div class="searchbar_banner">
@@ -39,32 +39,41 @@
         </nav>
     </header>
 
-    <main class="main_contact">
-        <h1 class="h1_contact">What's on your mind?</H1>
+    <main class="main_mypage">
 
-        <p class="main_p1_contact">Sometimes you got questions. We all do. At Game Hub we have an amazing customer
-            support staff that is there for you.</p>
-        <nav class="pic1_contact">
-            <img src="images/about/about_trade.png" alt="A logo with a dollarsign about buying & selling games"
-                class="pic1_contact" />
-        </nav>
-        <h2 class="main_sub_title_contact">Send us a message anytime!</h2>
-        <p class="main_p2_contact">Our customer staff are allways ready to help you out if you need our help. Send us a
-            message on the chat, and we will answer as soon as we can. </p>
-        <nav class="pic2_contact">
-            <img src="images/about/about_trade.png" alt="A logo with a dollarsign about buying & selling games"
-                class="pic2_contact" />
-        </nav>
-        <h3 class="main_sub_title_contact">It’s sometimes better hearing a voice</h3>
-        <p class="main_p3_contact">Sometimes it’s easier to just pick up the phone when you have some questions. Call us
-            on +47 00112233 </p>
+        <h1 class="h1_mypage">Hello</h1>
+        <h2 class="h2_mypage">Sign in to Game Hub or <a href="createanaccount.html">create an account</a></h2>
+        <div class="login_input-text_style">
+            <div class="login_input-field_style">
 
+                <form action="login.php" method="POST">
+                    <fieldset class="fieldset_mypage">
+                        <div class="login-container_mypage">
+                            <label class="login_input-text_style" for="email"></label>
+                            <input type="email" name="email" id="email" placeholder="Email or username"
+                                class="form__input_mypage login_input-field_style" required="Username required">
+                            <label class="login_input-text_style" for="password"></label>
+                            <input type="password" name="password" id="password" placeholder="Password"
+                                class="form__input_mypage login_input-field_style" required="Password required">
+                        </div>
+                        <div>
+                            <a href="index.html">
+                                <button class="button button_login">Login</button>
+                            </a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
     </main>
 
+    <aside class="aside_mypage">
+
+    </aside>
 
     <footer>
         <div class="social_media_buttons">
-            <img src="/images/global images/social_media_interactive_buttons.png"
+            <img src="/images/global_images/social_media_interactive_buttons.png"
                 alt="interactive sosial media buttons, which takes you to their respective site"
                 class="social_media_buttons" />
         </div>
@@ -83,7 +92,6 @@
             <a href="index.html" class="footer_policy">Store refound policy</a>
         </nav>
     </footer>
-
 </body>
 
 </html>
