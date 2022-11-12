@@ -6,37 +6,48 @@
   <meta name="description" content="CA - GameHub - BHL - Homepage" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="css/styles.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/4652493b4c.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="body_index">
-  <header class="header_index">
+
+  <header>
+    <div class="gamehub-logo_banner">
+      <a href="index.html">
+        <img src="/images/global_images/navigation_icons_header/gamehub-logo-text.png" alt="A logo for Game Hub"
+          class="gamehub-logo_banner" />
+      </a>
+    </div>
     <nav>
-      <ul class="ul_header">
-        <li><a class="active" href="index.html">Home</a></li>
+      <ul class="ul_header_desktop">
         <li><a href="contact.html">Contact</a></li>
         <li><a href="sellgames.html">Sell games</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="wishlist.html">Wishlist</a></li>
         <li><a href="mypage.html">My Page</a></li>
         <li><a href="cart.html">Cart</a></li>
+        <li><a>
+            <div class="searchbar_banner">
+              <form class="form_searchbar_banner">
+                <input type="search" name="searchbar" id="searchbar" class="searchbar_banner"
+                  placeholder="Search the gamestore...">
+                <button type="submit">Search</button>
+              </form>
+            </div>
+          </a>
       </ul>
     </nav>
   </header>
 
   <main class="main_index">
-    <form action="searchbar.php" method="POST">
-      <fieldset class="fieldset_searchbar_main">
-        <label class="searchbar_main_index" for="searchbar"></label>
-        <input type="text" name="searchbar" id="searchbar" class="input_searchbar_main_style">
-      </fieldset>
-    </form>
-
     <div class="main_pictures_container_index">
-      <div class="main_highlighted_picture_index pic_positioning_main">
-        <img src="/images/index/frontpage_images/frontpage_previewedgame_black.png" alt="A game called black"
-          class="main_highlighted_picture_index" />
+      <div class="main_highlighted_picture_index">
+        <a href="black_productpage.html">
+          <img src="/images/index/frontpage_images/frontpage_previewedgame_black.png" alt="A game called black"
+            class="main_highlighted_picture_index" />
+        </a>
       </div>
-      <div class="main_game_icons_index pic_positioning_side">
+      <div class="main_game_icons_index">
         <img src="/images/index/frontpage_images/game_icon_black.png" alt="A game called black"
           class="main_game_icons_index main_game_icon_select1" />
         <img src="/images/index/frontpage_images/game_icon_spacewar.png" alt="A game called spacewar"
@@ -52,27 +63,32 @@
   <aside class="aside_index">
     <h1 class="h1_index">Used games</h1>
     <div class="aside_games_index">
-      <img src="/images/index/gamecovers/game_spacewar.jpg" alt="A game called spacewar" class="aside_games_index" />
-      <img src="/images/index/gamecovers/game_racing.jpg" alt="A game called racing" class="aside_games_index" />
-      <img src="/images/index/gamecovers/game_boxer.jpg" alt="A game called boxer" class="aside_games_index" />
-      <img src="/images/index/gamecovers/game_furious.jpg" alt="A game called furious" class="aside_games_index" />
+      <img src="/images/index/aside_games/usedgames/aside_top_pic1_index.png" alt="A game called spacewar"
+        class="aside_games_index" />
+      <img src="/images/index/aside_games/usedgames/aside_top_pic2_index.png" alt="A game called racing"
+        class="aside_games_index" />
+      <img src="/images/index/aside_games/usedgames/aside_top_pic3_index.png" alt="A game called boxer"
+        class="aside_games_index" />
+      <img src="/images/index/aside_games/usedgames/aside_top_pic4_index.png" alt="A game called furious"
+        class="aside_games_index" />
     </div>
     <h2 class="h2_index">Top sellers</h2>
     <div class="aside_games_index">
-      <img src="/images/index/gamecovers/game_pingpongchampionship.jpg" alt="A game called ping pong championship"
+      <img src="/images/index/aside_games/topsellers/aside_bottom_pic1_index.png"
+        alt="A game called ping pong championship" class="aside_games_index" />
+      <img src="/images/index/aside_games/topsellers/aside_bottom_pic2_index.png" alt="A game called superduper"
         class="aside_games_index" />
-      <img src="/images/index/gamecovers/game_superduper.jpg" alt="A game called superduper"
+      <img src="/images/index/aside_games/topsellers/aside_bottom_pic3_index.png" alt="A game called furious"
         class="aside_games_index" />
-      <img src="/images/index/gamecovers/game_furious.jpg" alt="A game called furious" class="aside_games_index" />
-      <img src="/images/index/gamecovers/game_forgelegend.jpg" alt="A game called forge legend"
+      <img src="/images/index/aside_games/topsellers/aside_bottom_pic4_index.png" alt="A game called forge legend"
         class="aside_games_index" />
     </div>
   </aside>
 
-  <footer class="footer_index">
-    <div class="social_media_buttons"></div>
-    <img src="/images/global images/social_media_interactive_buttons.png"
-      alt="interactive sosial media buttons, which takes you to their respective site" class="social_media_buttons" />
+  <footer>
+    <div class="social_media_buttons">
+      <img src="/images/global_images/social_media_interactive_buttons.png"
+        alt="interactive sosial media buttons, which takes you to their respective site" class="social_media_buttons" />
     </div>
     <div class="hr_line">
       <hr />
@@ -86,6 +102,7 @@
       <a href="index.html" class="footer_policy">Terms of service</a>
       <a href="index.html" class="footer_policy">Privacy policy</a>
       <a href="index.html" class="footer_policy">Store refound policy</a>
+    </nav>
   </footer>
 </body>
 
