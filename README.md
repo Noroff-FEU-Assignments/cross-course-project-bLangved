@@ -14,7 +14,7 @@ I was not aware at the beginning of the Design course, that we would be coding t
 It's not all bad, and the amount I have learned through the assigment is huge! 
 
 
-FIGMA protoype:
+FIGMA prototype:
 https://www.figma.com/file/QCfWQUiDTgw64ECR8TIu8I/Design-1---CA?node-id=1%3A2
 
 Netlify: 
