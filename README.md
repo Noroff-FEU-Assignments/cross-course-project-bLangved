@@ -12,3 +12,10 @@ that its better to keep it a bit more simple, since the amount of code and tweak
 I was not aware at the beginning of the Design course, that we would be coding that up with HTML and CSS. I would have done some other design choices if that was the case. 
 
 It's not all bad, and the amount I have learned through the assigment is huge! 
+
+
+FIGMA protoype:
+https://www.figma.com/file/QCfWQUiDTgw64ECR8TIu8I/Design-1---CA?node-id=1%3A2
+
+Netlify: 
+https://ca-htmlandcss-bhl-gamehub.netlify.app/
