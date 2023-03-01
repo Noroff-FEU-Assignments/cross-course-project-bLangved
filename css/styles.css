@@ -1,0 +1,976 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Currently no tablet size. 500px -> 799px is not addressed. Desktop is 800px upwards atm. */
+/* Landscape mode on phones are not fixed. Changing to desktop-view atm */
+/* Fonts are not downloaded to website. This was not a huge focus under prototype development either, but had more Helvetica fonts */
+/* No support for specified aspect ratios. Having some issues especially at 21/9 format, which seems to be issue with grid-solution in containers not working as it should, but not very 
+noticeble in 16/9 format */
+/* A fair amount of elements are currently substitued as images instead of being build from the ground up with proper HTML and CSS */
+/* Mobile prototype was originally more built around being a dedicated app, but has been slightly replaced by a more scaled down version of the desktop website instead. I started with mobile prototype 
+under development, and built the desktop prototype afterwards, and I prefered the desktop astetics more then the mobile-version. It still has some elements from the mobile prototype */ 
+/* cart.html is not not working very good on desktop, and especially not on mobile. This was originally ment to be an overlay-page (at least on desktop) instead of a dedicated site, and it's a bit rushed */
+/* Overall missing a lot of animations which was made in the prototype */
+/* Hamburger-menu is overly simplefied atm */
+/* "Sell games" and "Wishlist" is included in the menu, but does not exist. These did not exist in prototype either */
+/* A login form can be seen in "My Page", and there is a "create new account" -version there as well. createnewaccount.html is currently using code from mypage.html, but has gotten some more input-fields */
+
+
+
+/* Global styles */
+
+/* Gotta work out how to make the button-area limited to the button itself
+set id="link-button on buttons for it to be universal.
+#link-button { 
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+*/
+
+    /* Buttons - Global */
+
+.button{
+    display: block;
+    border: none;
+    color: white;
+    padding: 0.7em 1em;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+    
+    .button:hover{
+        transition-duration: 0.4s;
+    }
+    
+    
+.button_buynow{
+    background-color: orange;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+    .button_buynow:hover{
+        background-color: darkorange;
+    }
+    .button_buynow:active{
+        background-color: #7CCB83;
+        color: white;
+    }
+    
+.button_wishlist{
+    background-color: lightgray;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .button_wishlist:hover{
+        background-color: rgba(211, 211, 211, 0.769);
+    }
+    .button_wishlist:active{
+        background-color: #7CCB83;
+        color: white;
+    }
+    
+.button_proceedtocheckout, .button_confirm-order_checkout{
+    background-color: #7CCB83;
+}
+    .button_proceedtocheckout:hover, .button_confirm-order_checkout:hover{
+        background-color: #56955b;
+    }
+
+
+    /* Headers - Global */
+
+.h1_about, .h1_contact, .h1_productpage, .h1_mypage, .h2_mypage, .h4_contact{
+    text-align: center;
+}
+    
+.h1_checkout, .h2_checkout, .h1_productpage{
+    color: white;
+}
+    
+.h1_checkout, .h1_cart, .h2_cart, .h3_cart, .h2_about, .h2_contact, .h3_contact, .h4_contact{
+    font-size: 2em;
+}
+    
+.h2_checkout{
+    font-size: 1em;
+}
+    
+.h2_cart, .h3_cart{
+    display: inline-block;
+}
+
+
+    /* Form & Fieldseth - Global */
+
+
+
+
+    /* Body - Global */
+body {
+    overflow: overlay;
+    margin: 0px;
+    background: white;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'aside'
+    'footer';
+}
+
+header{grid-area: header;}
+main{grid-area: main;}
+aside{grid-area: aside;}
+footer{grid-area: footer;}
+
+.body_productpage{
+    background-image: linear-gradient(RGB(16, 33, 50), RGB(36, 65, 107));
+}
+
+.body_checkout{
+    background: #474747;    
+}
+
+    /* Header - global */
+header{
+    background: orange;
+    max-width: 100%;
+}
+.gamehub-logo_banner{
+    display: block;
+}
+
+/* Aside - Global */
+
+aside{
+    margin-bottom: 50px;
+}
+
+
+    /* Footer - global */
+
+footer {
+    background: lightgray;   
+}
+.social_media_buttons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+  }
+
+.footer_copyright_paragraph{
+    text-align: left;
+}
+.footer_policy{
+    text-decoration: none;
+    text-align: left;
+    color: black;
+}
+
+
+/* Index - Global */
+.main_highlighted_picture_index {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.h1_index, .h2_index{
+    text-transform: uppercase;
+    font-size: 20px;
+    }
+        
+.h2_index{
+    margin-top: 50px;
+}
+.aside_games_index {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: auto auto auto auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* black_productpage */
+.mainpicture_productpage{
+    margin: 20px auto;
+  }
+
+.used_productpage{
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.standard_productpage{
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.deluxe_productpage{
+    grid-column-start: 4;
+    grid-column-end: 4;
+}
+
+.game_info_productpage, .about-game_productpage{
+    color: white;
+}
+
+.paragraph-left_productpage{
+    text-align: left;
+}
+
+.paragraph-right_productpage{
+    text-align: right;
+}
+
+.about-game_details_productpage{
+    color: white;
+}
+
+
+/* Cart - Global */
+.products_cart > .h1_cart{
+    padding: 20px 0;
+}
+
+.product1_cart{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.productpicture_cart{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid silver;
+}
+
+.productpicture_cart:hover{
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+}
+
+.productpicture_cart > img{
+    object-fit: cover;
+}
+
+.product-info{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 70px 20px auto;
+    grid-gap: 20px;
+    padding: 0 20px;
+}
+
+.product-name, .product-platform, .product-price{
+    font-size: 20px;
+}
+.product-name{
+    grid-row: 1;
+}
+.product-platform{
+    grid-row: 2;
+}
+.product-price{
+    grid-row: 2;
+    grid-column: end;
+}
+.product-quantity{
+    grid-row: 3;
+}
+.product-remove{
+    grid-row: 1;
+    grid-column: end;
+}
+
+.product-remove{ /* Not working. Needs a fix */
+    padding: 10px 25px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+    .product-remove:hover{
+        background-color: white;
+        color: red;
+        font-weight: 500;
+        border: 1px solid red;
+}
+
+.product-quantity > input{
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.sumsubtotal, .sumtotal_cart{
+    float: right;
+    font-size: 20px;
+}
+
+
+    /* Checkout - Global */
+
+.header-and-logo_checkout{
+    width: 100%;
+    display: flex;
+}
+
+.fa-cart-shopping{
+    position: relative;
+    top: 25px;
+    padding-left: 40px;
+    color: white;
+}
+
+.main_container_checkout{   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 200px;
+}
+
+.card_options_checkout{
+    display: inline-block;
+    padding: 5px 20px 15px 0;
+}
+
+.main_checkout_input-text_style{
+    color: orange;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.main_checkout_input-field_style{
+    font-size: 22px;
+    padding: 5px 0px 5px 0;
+    border-radius: 5px;
+}
+
+.fieldset_checkout{
+    border: 0;
+}
+
+
+.form__input_checkout{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 50px 0;
+}
+
+
+    /* My Page - Global */
+
+.login_input-field_style{
+    display: block;
+    font-size: 22px;
+    padding: 5px 0px 5px 0;
+    border-radius: 5px;
+    margin: 0 auto 20px auto;
+}
+
+    .login_input-field_style::placeholder {
+        color: black;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+.button_login{
+    background-color: orange;
+    width: 270px;
+}
+
+.fieldset_mypage{
+    border: none; 
+}
+
+.login-container_mypage{
+    display: block;
+}
+
+    /* About - Global */
+
+.main_p2_about{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.main_p3_about{
+    padding: 0 50px 50px 0px;
+}
+
+.pic1_about{
+    float: left;
+    max-width: 250px;
+    max-height: 100%;
+    margin-right: 50px; 
+}
+
+
+    /* Contact - Global */
+
+.main_p1_contact{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.main_p3_contact, .main_p4_contact{
+    padding: 0 50px 50px 0px;
+}
+
+.main_p2_contact{
+    margin-bottom: 250px;
+}
+
+.pic1_contact, .pic2_contact{
+    max-width: 250px;
+    max-height: 100%; 
+}
+
+.pic1_contact{
+    float: left;  
+    margin-right: 50px; 
+}
+
+.pic2_contact{
+    float: right;
+    margin-left: 50px;
+}
+
+.aside_p1_contact{
+    text-align: center;
+}
+
+.aside_contact{
+    margin-top: 50px;
+}
+
+.message-text-style_contact{
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+.message-field-style_contact{
+    display: block;
+    font-size: 22px;
+    padding: 5px 0px 5px 0;
+    border-radius: 5px;
+    margin: 0 auto 20px auto;
+}
+    
+.message-box_contact{
+    height: 200px;
+}
+
+    .message-box_contact::placeholder{
+        text-align: center;
+        color: gray;
+    }
+
+.button_send_contact{
+    background-color: orange;
+    width: 270px;
+}
+    
+.fieldset_contact{
+    border: none;
+}
+
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 499px){
+
+    /* Buttons */
+    .button{
+        width: 250px;
+        font-size: 18px;
+    }
+    
+
+    /* Headers */
+    .h2_checkout{
+        font-size: 20px;
+    }
+
+
+    /* Header */
+    header{
+        height: 6vh;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+    
+    .gamehub-logo_banner{
+        margin: 10px auto;
+        max-width: 150px;
+    }
+    
+    .ul_header_desktop{
+        display: none;
+    }
+    
+    /* Hamburger-menu */
+    .hamburger-menu_mobile{
+        position: absolute;
+        top: 20%;
+        left: 15px;
+    }
+    
+    .hamburger-nav_mobile, #menu-checkbox{
+        display: none;
+    }
+    
+    .hamburger-nav_mobile{
+        background: gray;
+    }
+    
+    #menu-checkbox:checked ~ .hamburger-nav_mobile {
+        display: block;
+    }
+    
+    .hamburger-nav_mobile a{
+        display: block;
+        color: white;
+        padding: 20px 30px 30px 0px;
+        list-style: none;
+        overflow: hidden;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    
+    /* Cart-menu */
+    .cart-menu_mobile{
+        position: relative;
+        bottom: 70px;
+        float: right;
+        right: 15px;
+    }
+    
+    .cart-menu_mobile i{
+        color: black;
+    }
+    
+    #cart-checkbox{
+        display: none;
+    }
+    
+    /* Main / Aside - Mobile */
+    main, aside{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .main_index{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .main_contact {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+    
+    .main_about, .main_checkout{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    /* Footer - Mobile */
+    .social_media_buttons{
+        max-width: 80%;
+    }
+    
+    .footer_copyright_paragraph{
+        margin: 20px 10px;
+        font-size: 14px;
+    }
+    
+    .footer_policy{
+        margin: 20px 5px;
+        font-size: 16px;
+    }
+    
+    /* HTML-Pages - Mobile */
+    
+        /* Index */
+    .searchbar_mobile_index{
+        display: block;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+        padding: 10px 0 10px;
+    }
+    
+    .searchbar_mobile_index::placeholder{
+        padding-left: 5px;
+        color: gray;
+        font-size: 16px;
+    }
+    
+    .main_highlighted_picture_index{
+        display: none;
+    }
+    
+    .main_highlighted_picture_index_mobile{
+        max-width: 300px;
+        max-height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .main_game_icons_index{
+        display: none;
+    }
+    
+        /* Black_productpage */
+    
+    .mainpicture_productpage{
+        width: 300px;
+    }
+    
+    .gameedition_buttons_productpage{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        text-align: center;
+        grid-gap: 1em;
+        color: white;
+    }
+    
+    .used_productpage, .standard_productpage, .deluxe_productpage{
+        height: 60%;
+    }
+    
+    .game_info_productpage, .about-game_productpage{
+        font-size: 1em;
+    }
+    
+    .about-game_details_productpage{
+        font-size: 18px;
+    }
+    
+    
+        /* Contact */
+    .h2_contact, .h3_contact{
+        font-size: 1em;
+    }
+    
+    .pic1_contact, .pic2_contact{
+        max-width: 150px;
+    }
+    
+    .pic1_contact{
+        margin-right: 25px; 
+    }
+    
+    .pic2_contact{
+        margin-left: 25px;
+    }
+    
+    .main_p1_contact{
+        margin-bottom: 50px;
+    }
+    
+    .main_p3_contact, .main_p4_contact{
+        padding: 0 50px 50px 0px;
+    }
+    
+    .main_p2_contact{
+        margin-bottom: 80px;
+    }
+    
+    .aside_contact{
+        margin-top: 0px;
+    }
+    
+
+        /* About */
+    .h2_about{
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    .main_p2_about{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+    
+    .main_p3_about{
+        padding: 0;
+    }
+    
+    .pic1_about{
+       display: none;
+    }
+    
+    
+    /* Cart */
+
+    .productpicture_cart{
+        height: 150px;
+    }
+
+    .productpicture_cart > img{
+        width: 100%;
+        height: 150px;
+    }
+    .product-name, .product-platform, .product-price{
+        font-size: 1em;
+    }
+    .product-platform{
+        grid-row: 1;
+    }
+    .product-price{
+        grid-row: 2;
+        grid-column: end;
+    }
+    .product-quantity{
+        grid-row: 2;
+    }
+   
+    .product-quantity > input{
+        width: 20px;
+    }
+    
+   /* Checkout */
+
+   .main_container_checkout{   
+        display: block;
+}
+
+    .card_options_checkout{
+        display: flex;
+        padding: 5px 5px 10px 0;
+        justify-content: center;   
+    }
+
+    .main_checkout_input-field_style{
+        font-size: 20px;
+    }
+    
+    .form__input_checkout{
+        margin: 0 0 20px 0;
+    }
+    }
+    
+    
+    
+    /* Desktop Styles */
+    @media only screen and (min-width: 800px){
+    
+    /* Buttons */
+    
+    .button{
+        width: 450px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    
+    
+    /* Header */
+    header {
+        height: 12vh;
+    }   
+    .gamehub-logo_banner{
+        margin: 20px auto;
+        max-width: 350px;
+    }
+    
+    .ul_header_desktop{
+        display: flex;
+        list-style: none;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;    
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: orange;   
+    }
+    
+    li a{
+        float: left;
+        padding: 5px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+    }
+    
+    li a:hover:not(.active) {
+        transition: color 0.2s ease-in-out;
+        color: white;
+      }
+    
+    li a.active{
+        background-color: white;
+        border-radius: 5px;
+        padding: 8px 16px;
+    }
+    
+    .form_searchbar_banner {
+        display: flex;
+        border: none;
+        color: #555;
+        border: 1px solid gray;
+        border-radius: 5px 0 0 5px;
+      }
+    
+        input[type="search"] {
+        display: block;
+        border: none;
+        margin: 0;
+        padding: 7px 8px;
+        font-size: 14px;
+        border-radius: inherit;
+      }
+    
+      button[type="submit"] {
+        text-indent: -999px;
+        overflow: hidden;
+        width: 40px;
+        padding: 0;
+        margin: 0;
+        border: 2px;
+        border-radius: 0 5px 5px 0;
+        background: white url("/images/global_images/navigation_icons_header/searchicon.svg") no-repeat center;
+        background-size: 50%;
+      }
+    
+    .hamburger-menu_mobile, .cart-menu_mobile{
+        display: none;
+    }
+    
+    /* Main / Aside - Desktop */
+    main, aside{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .main_about, .main_contact {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .main_contact{
+        margin-top: 20px;
+    }
+    .main_index{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    
+    /* Footer - Desktop */
+    .social_media_buttons{
+        max-width: 380px;   
+    }
+    
+    .footer_copyright_paragraph{
+        margin: 40px 20px;
+        font-size: 16px;
+    }
+    
+    .footer_policy{
+        margin: 40px 10px;
+        font-size: 18px;
+    }
+    
+    /* Index-page */
+    
+    .searchbar_mobile_index{
+        display: none;
+    }
+    
+    .main_highlighted_picture_index_mobile{
+        display: none;
+    }
+    
+    .main_pictures_container_index{
+        display: grid;
+        grid-template-columns: 4fr 1fr; /* Adjust main/side-picture size/grid-sizing in main */
+        cursor: pointer;
+    }
+        
+    .main_highlighted_picture_index {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .main_game_icons_index {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: grid;
+        max-width: 100%;
+        max-height: 50%;
+    }
+    
+    .main_game_icons_index:hover:not(.active){
+        background-color: lightgray;
+        border-radius: 10px;
+    }
+    
+    
+    /* Productpage-page */
+    
+    .mainpicture_productpage{
+        width: 700px;
+      }
+    
+    .h1_productpage{
+        text-transform: uppercase;
+        margin: 30px;
+    }
+    
+    .gameedition_buttons_productpage{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        text-align: center;
+        grid-gap: 2em;
+        color: white;
+    }
+    
+    .used_productpage, .standard_productpage, .deluxe_productpage{
+        height: 80%;
+    }
+    
+    .game_info_productpage, .about-game_productpage{
+        font-size: 2em;
+    }
+    
+    .about-game_details_productpage{
+        font-size: 20px;
+    }
+    
+        /* Cart */
+
+    .productpicture_cart > img{
+        width: 300px;
+        height: 200px;
+    }
+        
+        .productpicture_cart > img:hover{
+            opacity: 0.5;
+        }
+
+
+    }
+
